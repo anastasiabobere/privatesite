@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Mynerve", cursive;
+  background-color: rgb(235, 232, 232);
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 5rem;
+  animation: dropdown 2s ease;
+}
+.content {
+  padding: 4rem;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.content h1 {
+  font-size: 8rem;
+}
+p {
+  font-size: 2.5rem;
+}
+img {
+  height: 500px;
+  width: 400px;
+  animation: side 2s ease-in;
+  overflow: hidden;
+  transition-duration: 2s;
+  transition-property: transform;
+  border-radius: 10px;
+}
+img:hover {
+  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+}
+@keyframes side {
+  from {
+    transform: translateX(-500px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes dropdown {
+  from {
+    transform: translateY(-100px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@media only screen and (max-width: 800px) {
+  .content h1 {
+    font-size: 5rem;
+  }
+}
